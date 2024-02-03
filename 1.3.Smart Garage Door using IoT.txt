@@ -1,0 +1,48 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+class GarageDoor {
+private:
+    bool isOpen;
+    bool isLocked;
+
+public:
+    GarageDoor() : isOpen(false), isLocked(true) {}
+
+    void openDoor() {
+        if (!isLocked) {
+            isOpen = true;
+            std::cout << "Garage door is now open." << std::endl;
+        } else {
+            std::cout << "Garage door is locked. Unable to open." << std::endl;
+        }
+    }
+
+    void closeDoor() {
+        isOpen = false;
+        std::cout << "Garage door is now closed." << std::endl;
+    }
+
+    void lockDoor() {
+        isLocked = true;
+        std::cout << "Garage door is locked." << std::endl;
+    }
+
+    void unlockDoor() {
+        isLocked = false;
+        std::cout << "Garage door is unlocked." << std::endl;
+    }
+
+    void performLaserScan() {
+        std::cout << "Performing laser scan for obstacles." << std::endl;
+        // Add code here for actual laser scanning (not simulated in this example)
+    }
+
+    void executeVoiceCommand(const std::string& command) {
+        std::cout << "Executing voice command: " << command << std::endl;
+        // Add code here for actual voice command execution (not simulated in this example)
+    }
+
+    void sendSmartNotification(const std::string& message) {
+        std::cout << "Smart Notification: " << message << std::endl
