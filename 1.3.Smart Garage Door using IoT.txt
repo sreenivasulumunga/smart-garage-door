@@ -36,12 +36,11 @@ public:
 
     void performLaserScan() {
         std::cout << "Performing laser scan for obstacles." << std::endl;
-        // Add code here for actual laser scanning (not simulated in this example)
+    
     }
 
     void executeVoiceCommand(const std::string& command) {
         std::cout << "Executing voice command: " << command << std::endl;
-        // Add code here for actual voice command execution (not simulated in this example)
     }
 
     void sendSmartNotification(const std::string& message) {
